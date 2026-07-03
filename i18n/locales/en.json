@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "title": "Shirazi & Associates — Immigration & Family Law, Toronto",
+    "description": "Persian-speaking immigration and family lawyers in Toronto, serving newcomers and families across Ontario."
+  },
+  "firm": "Shirazi & Associates",
+  "skip": "Skip to main content",
+
+  "nav": {
+    "aria": "Primary",
+    "immigration": "Immigration",
+    "family": "Family Law",
+    "about": "About",
+    "contact": "Contact",
+    "langGroup": "Language"
+  },
+
+  "hero": {
+    "eyebrow": "Immigration & Family Law — Toronto",
+    "headline": "A steady hand for the hardest year of your life.",
+    "echo": "همراهی مطمئن در سخت‌ترین سال زندگی شما.",
+    "lede": "Persian-speaking immigration and family lawyers serving newcomers and families across Ontario. We explain every step in the language you think in.",
+    "ctaPrimary": "Book a free consultation",
+    "ctaSecondary": "Our practice areas"
+  },
+
+  "facts": [
+    {
+      "label": "Consultations",
+      "value": "Free",
+      "note": "First 30 minutes, in English or Farsi. No obligation."
+    },
+    {
+      "label": "Based in",
+      "value": "Toronto",
+      "note": "Serving all of Ontario — in person, by phone, or online."
+    },
+    {
+      "label": "Practice",
+      "value": "Two areas only",
+      "note": "Immigration and family law. Nothing else, on purpose."
+    }
+  ],
+
+  "practice": {
+    "eyebrow": "What we do",
+    "heading": "Two areas of law, practised properly.",
+    "immigration": {
+      "title": "Immigration",
+      "items": [
+        "Express Entry & provincial nominees",
+        "Spousal & family sponsorship",
+        "Refugee claims & humanitarian applications",
+        "Study & work permits, restoration",
+        "Refusals, appeals & judicial review"
+      ],
+      "cta": "Discuss an immigration matter"
+    },
+    "family": {
+      "title": "Family Law",
+      "items": [
+        "Separation & divorce",
+        "Parenting time & decision-making",
+        "Child & spousal support",
+        "Property division & marriage contracts",
+        "Mehrieh & foreign marriage recognition"
+      ],
+      "cta": "Discuss a family matter"
+    },
+    "overlap": {
+      "title": "Where they meet",
+      "body": "A separation can put your status at risk. A sponsorship can collapse mid-application. Most firms hand you to a second lawyer at exactly that moment — we don't."
+    }
+  },
+
+  "process": {
+    "eyebrow": "How it works",
+    "heading": "You will always know what happens next.",
+    "steps": [
+      {
+        "title": "Talk to us",
+        "body": "Thirty minutes, free, in the language you prefer. Tell us the situation — we'll tell you honestly whether you need a lawyer at all."
+      },
+      {
+        "title": "A written plan",
+        "body": "Before any money changes hands you receive the strategy, the timeline, and a flat fee where possible — in both languages."
+      },
+      {
+        "title": "We do the work",
+        "body": "Filings, correspondence, and hearings handled by us. You get an update at every stage, whether or not there is news."
+      }
+    ]
+  },
+
+  "counsel": {
+    "eyebrow": "Counsel",
+    "name": "Nasrin Shirazi",
+    "quote": "“I arrived here at nineteen with a file I couldn't read. Nobody should have to argue for their own family in a second language.”",
+    "body": "Called to the bar in Ontario, with fifteen years spent almost entirely on immigration and family files for Persian-speaking clients. Appears before the IRB, the Federal Court, and the Ontario Superior Court of Justice.",
+    "credentials": ["Law Society of Ontario", "Canadian Bar Association", "English · فارسی · Dari"]
+  },
+
+  "contact": {
+    "eyebrow": "Get in touch",
+    "heading": "Tell us what's happening.",
+    "lede": "Every enquiry is read by a lawyer, not an intake form. We reply within one business day — and if your matter is urgent, say so and we'll move it up.",
+    "form": {
+      "name": "Your name",
+      "nameError": "Please tell us your name.",
+      "contact": "Email or phone",
+      "contactHint": "Whichever you'd rather we used.",
+      "contactError": "We need one way to reach you.",
+      "matter": "What is this about?",
+      "matterOptions": ["Immigration", "Family law", "Both / not sure"],
+      "message": "In your own words",
+      "messageHint": "Write in English or Farsi — whichever is easier. Both are read by a lawyer.",
+      "submit": "Send enquiry",
+      "sent": "Sent ✓",
+      "disclaimer": "Sending this message does not create a solicitor–client relationship. Please don't include confidential details until we've confirmed we can act for you."
+    }
+  },
+
+  "footer": {
+    "practice": "Practice",
+    "firmCol": "Firm",
+    "office": "Office",
+    "address": "Bay Street, Toronto, Ontario",
+    "copyright": "© 2026 Shirazi & Associates. Fictional firm — design mockup.",
+    "legal": "Information on this site is general and not legal advice."
+  }
+}
