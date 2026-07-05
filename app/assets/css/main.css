@@ -1,0 +1,200 @@
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  --bg: #0E0E0D;
+  --bg-lift: #141413;
+  --ink: #F4F1E8;
+  --ink-2: #B8B5A8;
+  --ink-3: #6A675E;
+  --gold: #C9A44C;
+  --gold-hi: #DBB864;
+  --teal: #3E8A78;
+  --teal-lt: #7FBFB0;
+  --danger: #E4886F;
+  --line: #2A2A28;
+  --line-2: #3A3A36;
+
+  /* Semantic aliases — components reference these, never the raw hues, so a
+     colour variant remaps meaning rather than redefining what "gold" is.
+     --accent   : primary actions, eyebrows, section labels
+     --accent-2 : the bilingual echo, bullets, step numbers
+     --on-accent: text sitting on a filled accent surface */
+  --accent: var(--gold);
+  --accent-hover: var(--gold-hi);
+  --accent-2: var(--teal-lt);
+  --accent-line: var(--teal);
+  --on-accent: #12110E;
+
+  --font-en: "Inter", -apple-system, "Segoe UI", sans-serif;
+  --font-fa: "Vazirmatn", "Noto Naskh Arabic", Tahoma, sans-serif;
+
+  /* 4pt spacing scale */
+  --s1: 4px;  --s2: 8px;   --s3: 12px;  --s4: 16px;  --s5: 24px;
+  --s6: 32px; --s7: 48px;  --s8: 64px;  --s9: 96px;  --s10: 128px;
+
+  --pad: clamp(20px, 5vw, 80px);
+  --dur: 240ms;
+  --ease-out: cubic-bezier(.2, .7, .3, 1);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-en);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, svg { max-width: 100%; }
+h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -.03em; line-height: 1.05; }
+p { margin: 0; }
+a { color: inherit; }
+
+/* ------------------------------------------------------------
+   RTL — layout mirrors for free via CSS logical properties.
+   Only the typographic rhythm needs correcting: Arabic-script
+   faces need looser leading, zero tracking, and smaller display
+   sizes to sit level with the Latin scale.
+   ------------------------------------------------------------ */
+html[dir="rtl"] body { font-family: var(--font-fa); }
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4 { letter-spacing: 0; line-height: 1.4; }
+html[dir="rtl"] p { line-height: 2; }
+html[dir="rtl"] .eyebrow { letter-spacing: .04em; }
+
+/* ============================================================
+   PRIMITIVES
+   ============================================================ */
+/* Hidden by a vertical offset, not a horizontal one: `inset-inline-start:
+   -9999px` resolves to `right: -9999px` under RTL and blows the document
+   out to ~10000px wide. Vertical displacement is direction-agnostic. */
+.skip {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  z-index: 99;
+  transform: translateY(-200%);
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: 14px 20px;
+  font-weight: 600;
+}
+.skip:focus { transform: translateY(0); }
+
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--teal-lt);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.lede {
+  color: var(--ink-2);
+  font-size: 17px;
+  line-height: 1.75;
+  max-width: 52ch;
+}
+html[dir="rtl"] .lede { font-size: 18px; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background var(--dur) var(--ease-out),
+              border-color var(--dur) var(--ease-out),
+              color var(--dur) var(--ease-out);
+}
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-primary:disabled { opacity: .65; cursor: default; }
+.btn-ghost { border-color: var(--line-2); color: var(--ink); }
+.btn-ghost:hover { border-color: var(--ink); }
+.btn svg { flex: none; }
+html[dir="rtl"] .btn svg { transform: scaleX(-1); }
+
+/* ============================================================
+   GIRIH GRID — the shared layout system
+   ============================================================ */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 1px solid var(--line);
+}
+.cell {
+  padding: clamp(28px, 4vw, 56px) var(--pad);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--s4);
+}
+.cell:last-child { border-bottom: 0; }
+
+@media (min-width: 900px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+  .cell {
+    padding-inline: clamp(28px, 3vw, 52px);
+    border-inline-end: 1px solid var(--line);
+    border-bottom: 0;
+  }
+  .grid > .cell:nth-child(3n),
+  .grid > .cell:last-child { border-inline-end: 0; }
+  .grid > .cell:first-child { padding-inline-start: var(--pad); }
+  .span-2 { grid-column: span 2; }
+  .span-3 { grid-column: span 3; }
+}
+
+.section-head {
+  padding: clamp(64px, 9vw, 120px) var(--pad) clamp(24px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+}
+.section-head h2 { font-size: clamp(30px, 4vw, 52px); max-width: 20ch; }
+html[dir="rtl"] .section-head h2 { font-size: clamp(25px, 3.2vw, 42px); }
+
+/* ============================================================
+   MOTION — meaning only; transform/opacity only
+   ============================================================ */
+.reveal { opacity: 0; transform: translateY(14px); }
+.reveal.in {
+  opacity: 1;
+  transform: none;
+  transition: opacity 420ms var(--ease-out), transform 420ms var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
