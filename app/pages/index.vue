@@ -13,5 +13,6 @@ const { root } = useReveal()
     <Testimonials />
     <FaqSection />
     <ContactSection />
+    <StickyCta />
   </main>
 </template>

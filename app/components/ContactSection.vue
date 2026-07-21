@@ -156,7 +156,7 @@ form {
 input, select, textarea {
   background: var(--bg-lift);
   color: var(--ink);
-  border: 1px solid var(--line-2);
+  border: 1px solid var(--ink-3);
   border-radius: 2px;
   padding: 14px 16px;
   min-height: 52px;
@@ -166,6 +166,7 @@ input, select, textarea {
 }
 textarea { min-height: 120px; resize: vertical; line-height: 1.6; }
 input:focus, select:focus, textarea:focus { border-color: var(--accent-line); }
+input::placeholder, textarea::placeholder { color: var(--ink-3); }
 
 .invalid input, .invalid select, .invalid textarea { border-color: var(--danger); }
 .error { font-size: 13px; color: var(--danger); }

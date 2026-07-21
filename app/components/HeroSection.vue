@@ -22,7 +22,7 @@ const echo = computed(() => t('hero.echo'))
         {{ echo }}
       </p>
       <p class="lede">{{ t('hero.lede') }}</p>
-      <div class="cta">
+      <div id="hero-cta" class="cta">
         <a class="btn btn-primary" href="#contact">{{ t('hero.ctaPrimary') }}</a>
         <a class="btn btn-ghost" href="#practice">{{ t('hero.ctaSecondary') }}</a>
       </div>
