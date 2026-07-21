@@ -42,7 +42,6 @@ onBeforeUnmount(() => {
         <NuxtLink :to="{ path: localePath('/'), hash: '#counsel' }" @click="closeNav">{{ t('nav.about') }}</NuxtLink>
         <NuxtLink :to="{ path: localePath('/'), hash: '#contact' }" @click="closeNav">{{ t('nav.contact') }}</NuxtLink>
       </nav>
-      <LangToggle />
       <button
         type="button"
         class="nav-toggle"
@@ -59,6 +58,14 @@ onBeforeUnmount(() => {
         </svg>
       </button>
     </div>
+
+    <!-- Pinned outside the mirrored flex flow on purpose: the switcher is a
+         persistent UI control, not page content, so it stays in the same
+         screen corner in both languages instead of swapping sides with the
+         rest of the nav. -->
+    <div class="lang-slot">
+      <LangToggle />
+    </div>
   </header>
 </template>
 
@@ -72,6 +79,9 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   gap: var(--s5);
   padding: 18px var(--pad);
+  /* Physical, not logical: reserves room on the true right edge for
+     .lang-slot below, in both directions. */
+  padding-right: calc(var(--pad) + 116px);
   background: rgba(14, 14, 13, .88);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
@@ -91,6 +101,13 @@ html[dir="rtl"] .wordmark { letter-spacing: 0; }
 .nav-links { display: flex; gap: var(--s6); font-size: 14px; color: var(--ink-2); }
 .nav-links a { text-decoration: none; transition: color var(--dur) var(--ease-out); }
 .nav-links a:hover { color: var(--ink); }
+
+.lang-slot {
+  position: absolute;
+  top: 50%;
+  right: var(--pad);
+  transform: translateY(-50%);
+}
 
 .nav-toggle {
   display: none;
