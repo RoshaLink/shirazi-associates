@@ -1,14 +1,13 @@
 <script setup lang="ts">
 const { t, tm, rt } = useI18n()
 const credentials = computed(() => (tm('counsel.credentials') as any[]).map(rt))
+const initials = computed(() => t('counsel.name').split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase())
 </script>
 
 <template>
   <section id="counsel" class="counsel">
-    <!-- No stock photography: the mark is cropped so it bleeds past the
-         frame. A real portrait drops into this frame with the same crop. -->
     <div class="portrait">
-      <GirihMark variant="portrait" />
+      <LawyerPortrait :initials="initials" tone="gold" size="lg" />
     </div>
 
     <div class="bio">

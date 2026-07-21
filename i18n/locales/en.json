@@ -100,6 +100,27 @@
     "credentials": ["Law Society of Ontario", "Canadian Bar Association", "English · فارسی · Dari"]
   },
 
+  "team": {
+    "eyebrow": "The team",
+    "heading": "Two more voices in the room.",
+    "members": [
+      {
+        "name": "Aram Kiani",
+        "title": "Senior Associate — Immigration",
+        "body": "Called to the bar in 2015. Handles Express Entry, provincial nominees, and refusal appeals — with a particular focus on files that have already gone wrong once.",
+        "tone": "teal",
+        "credentials": ["Law Society of Ontario", "English · فارسی"]
+      },
+      {
+        "name": "Leila Farrokhzad",
+        "title": "Associate — Family Law",
+        "body": "Joined the firm in 2021 after five years at a Toronto family law boutique. Handles separations, support claims, and mehrieh recognition.",
+        "tone": "gold",
+        "credentials": ["Law Society of Ontario", "English · فارسی · العربية"]
+      }
+    ]
+  },
+
   "contact": {
     "eyebrow": "Get in touch",
     "heading": "Tell us what's happening.",
