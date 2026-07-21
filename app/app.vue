@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t, locale } = useI18n()
+const { t, tm, rt, locale } = useI18n()
 
 /**
  * useLocaleHead supplies lang + dir (read from the locale definitions in
@@ -12,6 +12,52 @@ const localeHead = useLocaleHead()
 // hreflang — swap both together for the real domain.
 const siteUrl = 'https://shirazilaw.ca'
 const ogImage = `${siteUrl}/og-image.png`
+
+/**
+ * One site-wide LegalService schema, since the firm identity/address/staff
+ * don't vary by page — same reasoning as centralizing title/OG/Twitter meta
+ * here rather than per-page. FAQPage is a near-free addition since faq.items
+ * already has the exact question/answer shape schema.org wants.
+ */
+const structuredData = computed(() => {
+  const employees = [
+    { name: t('counsel.name'), jobTitle: 'Lawyer' },
+    ...(tm('team.members') as any[]).map(m => ({ name: rt(m.name), jobTitle: rt(m.title) }))
+  ]
+  const faqItems = tm('faq.items') as any[]
+
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'LegalService',
+      name: t('firm'),
+      url: siteUrl,
+      image: ogImage,
+      telephone: '+1-416-555-0142',
+      email: 'hello@shirazilaw.ca',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: t('footer.addressStructured.streetAddress'),
+        addressLocality: t('footer.addressStructured.addressLocality'),
+        addressRegion: t('footer.addressStructured.addressRegion'),
+        postalCode: t('footer.addressStructured.postalCode'),
+        addressCountry: t('footer.addressStructured.addressCountry')
+      },
+      areaServed: 'Ontario, Canada',
+      knowsLanguage: ['en', 'fa'],
+      employee: employees
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map(item => ({
+        '@type': 'Question',
+        name: rt(item.question),
+        acceptedAnswer: { '@type': 'Answer', text: rt(item.answer) }
+      }))
+    }
+  ]
+})
 
 useHead(() => {
   const canonical = localeHead.value.link?.find(l => l.rel === 'canonical')?.href ?? siteUrl
@@ -32,7 +78,11 @@ useHead(() => {
       { name: 'twitter:title', content: t('meta.title') },
       { name: 'twitter:description', content: t('meta.description') },
       { name: 'twitter:image', content: ogImage }
-    ]
+    ],
+    script: structuredData.value.map(data => ({
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(data)
+    }))
   }
 })
 </script>

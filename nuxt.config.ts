@@ -1,8 +1,30 @@
+import { readFileSync } from 'node:fs'
+
+// Blog slugs come from the same i18n content the pages render, so the
+// sitemap can't silently miss a post — insights/[slug].vue is a dynamic
+// route the crawler can't enumerate on its own.
+const insightSlugs = (
+  JSON.parse(readFileSync(new URL('./i18n/locales/en.json', import.meta.url), 'utf-8')).insights?.items ?? []
+).map((item: { slug: string }) => item.slug)
+
 export default defineNuxtConfig({
   compatibilityDate: '2026-07-01',
   devtools: { enabled: false },
 
-  modules: ['@nuxtjs/i18n'],
+  modules: ['@nuxtjs/i18n', '@nuxtjs/sitemap', '@nuxtjs/robots'],
+
+  // Required by @nuxtjs/sitemap/@nuxtjs/robots. Swap for the real domain
+  // alongside i18n.baseUrl and app/app.vue's siteUrl below.
+  site: {
+    url: 'https://shirazilaw.ca'
+  },
+
+  sitemap: {
+    urls: () => insightSlugs.flatMap((slug: string) => [
+      `/insights/${slug}`,
+      `/fa/insights/${slug}`
+    ])
+  },
 
   css: ['~/assets/css/main.css'],
 

@@ -14,7 +14,10 @@
     "contact": "Contact",
     "langGroup": "Language",
     "toggleOpen": "Open menu",
-    "toggleClose": "Close menu"
+    "toggleClose": "Close menu",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "insights": "Insights"
   },
 
   "hero": {
@@ -198,12 +201,307 @@
     }
   },
 
+  "immigrationPage": {
+    "hero": {
+      "eyebrow": "Immigration",
+      "heading": "Practical, honest immigration law.",
+      "lede": "From Express Entry to refusals and appeals, we handle Canadian immigration matters for individuals, couples, and families — in English, Farsi, and Dari."
+    },
+    "intro": [
+      "Immigration law rewards precision and punishes small mistakes. We prepare files the way we'd want our own family's file prepared — thoroughly, on time, and with a clear explanation of what happens if something goes wrong.",
+      "Below is where most of our immigration work falls. If your situation doesn't fit neatly into one category, that's normal — tell us what's going on and we'll tell you honestly where you stand."
+    ],
+    "services": [
+      {
+        "title": "Express Entry & provincial nominees",
+        "body": [
+          "We prepare and file Express Entry profiles and provincial nominee applications, including CRS score reviews, program-eligibility checks, and responses to procedural fairness letters.",
+          "We also help with restoration and status changes when a program's requirements shift mid-application."
+        ]
+      },
+      {
+        "title": "Spousal & family sponsorship",
+        "body": [
+          "Sponsoring a spouse, partner, or family member involves proving a relationship is genuine — on paper, to a stranger. We build sponsorship applications with the evidence officers actually look for, and represent you if a file is refused or delayed."
+        ]
+      },
+      {
+        "title": "Refugee claims & humanitarian applications",
+        "body": [
+          "We prepare refugee claims for the Immigration and Refugee Board and humanitarian & compassionate applications for people who don't fit a standard immigration category but have a strong case to stay."
+        ]
+      },
+      {
+        "title": "Study & work permits, restoration",
+        "body": [
+          "We handle study permit and work permit applications, extensions, and restoration of status for people whose permits have lapsed — including the tight timelines restoration involves."
+        ]
+      },
+      {
+        "title": "Refusals, appeals & judicial review",
+        "body": [
+          "A refusal isn't always the end of the road. We review refusal letters, identify what went wrong, and pursue appeals at the Immigration Appeal Division or judicial review at the Federal Court where it's the right move."
+        ]
+      }
+    ],
+    "cta": {
+      "heading": "Talk to us about your situation.",
+      "body": "Thirty minutes, free, in the language you prefer.",
+      "button": "Book a free consultation"
+    }
+  },
+
+  "familyLawPage": {
+    "hero": {
+      "eyebrow": "Family Law",
+      "heading": "Family law, without losing sight of the family.",
+      "lede": "Separation, divorce, support, and property — handled with the same care whether or not an immigration matter is also on the table."
+    },
+    "intro": [
+      "Family law decisions affect people who have to keep co-parenting, keep living in the same city, sometimes keep sharing a business — long after the file closes. We aim for outcomes that hold up, not just ones that win an argument.",
+      "Here's where most of our family law work falls. Many files touch more than one of these at once, which is normal — we handle the whole picture, not just one piece of it."
+    ],
+    "services": [
+      {
+        "title": "Separation & divorce",
+        "body": [
+          "We advise on separation agreements and divorce applications, from straightforward uncontested matters to more complex files involving property, support, or parenting disagreements."
+        ]
+      },
+      {
+        "title": "Parenting time & decision-making",
+        "body": [
+          "We help parents reach workable parenting arrangements — through negotiation where possible, and court where necessary — with the child's stability as the starting point, not an afterthought."
+        ]
+      },
+      {
+        "title": "Child & spousal support",
+        "body": [
+          "We calculate, negotiate, and if needed litigate child and spousal support, using the Federal Child Support Guidelines and current case law rather than guesswork."
+        ]
+      },
+      {
+        "title": "Property division & marriage contracts",
+        "body": [
+          "We handle equalization of net family property on separation, and draft marriage contracts and cohabitation agreements for people who want clarity before they need it."
+        ]
+      },
+      {
+        "title": "Mehrieh & foreign marriage recognition",
+        "body": [
+          "We advise on how mehrieh is treated in an Ontario family law proceeding, and on recognizing marriages and divorces performed outside Canada — an area many general family law firms rarely see."
+        ]
+      }
+    ],
+    "cta": {
+      "heading": "Tell us what's happening.",
+      "body": "Every enquiry is read by a lawyer, not an intake form.",
+      "button": "Book a free consultation"
+    }
+  },
+
+  "insights": {
+    "hero": {
+      "eyebrow": "Insights",
+      "heading": "Notes on immigration and family law.",
+      "lede": "General, plain-language pieces on the areas we practise — not legal advice, but a place to start."
+    },
+    "items": [
+      {
+        "slug": "express-entry-basics",
+        "title": "How Express Entry Actually Works",
+        "excerpt": "A plain-language walkthrough of the points system, the pool, and what actually gets you an invitation.",
+        "date": "2026-05-04",
+        "readTime": "6 min read",
+        "body": [
+          "Express Entry is the system Canada uses to manage most economic immigration — Federal Skilled Worker, Federal Skilled Trades, and Canadian Experience Class all funnel through it. It isn't itself a program you apply to; it's a pool you enter, and then rank inside.",
+          "Once you submit a profile, you're scored under the Comprehensive Ranking System (CRS), which weighs age, education, language ability, and work experience — plus extra points for a provincial nomination, a valid job offer, or French-language ability. Periodically, IRCC draws candidates from the pool, starting from the highest score down, and issues Invitations to Apply (ITAs).",
+          "The score that gets an invitation moves around draw to draw, and by category in recent years — some draws now target specific occupations or French speakers rather than pulling from the general pool. That's the part a lot of people miss: a 'good' CRS score six months ago might not be competitive for this month's draws, and vice versa.",
+          "Getting an ITA isn't the finish line. You then have a limited window to submit a full application with supporting documents, and errors or missing evidence at that stage can cause delays or refusals even for a strong profile.",
+          "If your CRS score isn't where you'd like it, a provincial nomination is often the fastest way to add meaningful points — but each province has its own streams and criteria, and picking the wrong one can cost months.",
+          "This is a general overview, not an assessment of your specific eligibility — CRS math and draw patterns change often enough that it's worth a real conversation before you build a plan around any of it."
+        ]
+      },
+      {
+        "slug": "signs-you-need-a-family-lawyer",
+        "title": "Five Signs It's Time to Talk to a Family Lawyer",
+        "excerpt": "You don't need a crisis to justify a consultation. Here's when it's worth the conversation.",
+        "date": "2026-04-14",
+        "readTime": "4 min read",
+        "body": [
+          "Most people wait too long to talk to a family lawyer — not because they're avoiding it, but because they're not sure the situation is 'serious enough' yet. It usually is.",
+          "1. You and your partner have stopped living as a couple, even under the same roof. Separation in Ontario is about conduct, not paperwork — you can be legally separated while still sharing a house, and the date matters for support and property calculations later.",
+          "2. Money is starting to move in ways you don't fully understand — accounts closing, large transfers, new debt in your name. These conversations get harder to unwind the longer they're left.",
+          "3. Someone has mentioned moving out of the city or country with the children. Parenting arrangements around relocation are one of the most time-sensitive areas of family law — early advice matters more here than almost anywhere else.",
+          "4. You're being asked to sign something — a separation agreement, a marriage contract, anything with a lawyer's letterhead on it — without independent legal advice of your own.",
+          "5. You simply don't know what you're entitled to, or what you owe. A short conversation usually answers that faster than months of guessing.",
+          "None of these mean litigation is coming. Most family law matters resolve without a courtroom — but they resolve better when you understood your options early, not after decisions were already made."
+        ]
+      },
+      {
+        "slug": "spousal-sponsorship-what-to-expect",
+        "title": "Spousal Sponsorship: What to Expect, Start to Finish",
+        "excerpt": "From proving your relationship is genuine to the day a decision arrives — what the process actually looks like.",
+        "date": "2026-03-02",
+        "readTime": "7 min read",
+        "body": [
+          "Spousal and common-law sponsorship is, on paper, one of the more 'straightforward' immigration categories — a Canadian citizen or permanent resident sponsoring their partner. In practice, it's an exercise in proving something deeply personal to a stranger reviewing a file.",
+          "The application has two linked parts: the sponsor's application (confirming they meet the requirements to sponsor) and the principal applicant's application (confirming the relationship and the applicant's admissibility). Both are assessed together.",
+          "The evidence that actually moves a file is rarely the wedding photos. Officers look for a pattern over time — joint finances, shared leases or mortgages, communication history, family and friends who can speak to the relationship, and consistency across both applicants' answers if either is interviewed.",
+          "Processing times move around and differ depending on whether the applicant is inside or outside Canada, and whether they apply for an open work permit alongside the sponsorship. Neither of those choices is automatic — they depend on your specific situation.",
+          "Delays and requests for more evidence ('procedural fairness letters') aren't unusual and aren't automatically a bad sign, but they do need a considered response — a rushed or incomplete answer can turn a delay into a refusal.",
+          "If a sponsorship is refused, there's often a path forward — an appeal to the Immigration Appeal Division, or a fresh application addressing what went wrong — but the right move depends entirely on why it was refused."
+        ]
+      },
+      {
+        "slug": "mehrieh-in-canadian-family-law",
+        "title": "How Mehrieh Is Treated in Canadian Family Law",
+        "excerpt": "Mehrieh doesn't disappear when a marriage crosses a border. Here's how Ontario courts generally approach it.",
+        "date": "2026-02-10",
+        "readTime": "5 min read",
+        "body": [
+          "Mehrieh (mehr) — the payment a husband promises or gives a wife as part of an Islamic marriage contract — comes up often in Ontario separations involving Persian-speaking families, and it doesn't fit neatly into Canadian family law's usual categories.",
+          "Ontario courts have generally treated mehrieh as a valid, enforceable contractual obligation, provided it can be proven — which usually means the marriage contract (or 'aghd nameh') is available, clearly specifies the amount, and was entered into voluntarily by both parties.",
+          "That said, courts have also scrutinized mehrieh agreements the way they scrutinize any domestic contract — for issues like independent legal advice, financial disclosure at the time of signing, and whether enforcing it would be unconscionable in the circumstances.",
+          "Mehrieh claims are usually argued alongside, not instead of, the ordinary property and support claims available under Ontario family law — the two aren't mutually exclusive, and how they interact depends on the specific facts.",
+          "If your marriage contract was signed outside Canada, in a language other than English or French, translation and authentication become part of the practical work of the case, not just a formality.",
+          "This is a fast-moving and fact-specific area — how a mehrieh claim plays out depends heavily on the wording of your particular contract and the evidence available, so this is worth a real conversation rather than a general assumption either way."
+        ]
+      }
+    ]
+  },
+
+  "privacy": {
+    "hero": {
+      "eyebrow": "Legal",
+      "heading": "Privacy Policy",
+      "lede": "How Shirazi & Associates collects, uses, and protects the information you share with us."
+    },
+    "updated": "Last updated July 2026",
+    "sections": [
+      {
+        "heading": "Information we collect",
+        "body": [
+          "When you use our contact form, book a consultation, or email us directly, we collect what you choose to share — typically your name, a phone number or email address, and a short description of your matter.",
+          "Our website also uses a single functional cookie to remember your preferred language (English or Farsi) between visits. We don't use advertising or third-party tracking cookies."
+        ]
+      },
+      {
+        "heading": "How we use your information",
+        "body": [
+          "We use the information you send us to respond to your enquiry, assess whether we can act for you, and — if you become a client — to open and manage your file.",
+          "We don't sell, rent, or share your information with third parties for marketing purposes."
+        ]
+      },
+      {
+        "heading": "How long we keep it",
+        "body": [
+          "If your enquiry doesn't become a retainer, we keep your contact details only as long as needed to follow up, then delete them. Client files are retained in line with the Law Society of Ontario's record-keeping requirements."
+        ]
+      },
+      {
+        "heading": "Your rights",
+        "body": [
+          "You can ask us at any time what information we hold about you, request a correction, or ask us to delete it — subject to any professional obligations we have to keep client records.",
+          "To make a request, contact us using the details below."
+        ]
+      },
+      {
+        "heading": "Security",
+        "body": [
+          "We take reasonable technical and administrative precautions to protect the information you share with us. No method of transmission over the internet is completely secure, so please avoid sending highly sensitive details until we've confirmed we can act for you."
+        ]
+      },
+      {
+        "heading": "Changes to this policy",
+        "body": [
+          "We may update this policy from time to time. The date at the top of this page shows when it was last revised."
+        ]
+      },
+      {
+        "heading": "Contact us",
+        "body": [
+          "Questions about this policy can be sent through our contact form, or to the phone number in our footer."
+        ]
+      }
+    ]
+  },
+
+  "terms": {
+    "hero": {
+      "eyebrow": "Legal",
+      "heading": "Terms of Use",
+      "lede": "The terms that apply to your use of this website."
+    },
+    "updated": "Last updated July 2026",
+    "sections": [
+      {
+        "heading": "No solicitor–client relationship",
+        "body": [
+          "Browsing this website, or sending us a message through it, does not create a solicitor–client relationship. That relationship begins only once we've confirmed in writing that we can act for you."
+        ]
+      },
+      {
+        "heading": "Not legal advice",
+        "body": [
+          "Everything on this site — including the Insights section — is general information about immigration and family law, not legal advice for your specific situation. Laws and procedures change, and every file is different; please speak with a lawyer before relying on anything you read here."
+        ]
+      },
+      {
+        "heading": "Using this website",
+        "body": [
+          "You're welcome to browse this site and share links to it. Please don't attempt to copy, scrape, or republish its content, or interfere with its normal operation."
+        ]
+      },
+      {
+        "heading": "Intellectual property",
+        "body": [
+          "The text, design, and graphics on this site belong to Shirazi & Associates unless otherwise noted, and may not be reused without permission."
+        ]
+      },
+      {
+        "heading": "No warranty",
+        "body": [
+          "We try to keep this site accurate and up to date, but we make no guarantee that it's complete, current, or error-free, and we're not liable for decisions made based solely on its content."
+        ]
+      },
+      {
+        "heading": "Governing law",
+        "body": [
+          "These terms are governed by the laws of Ontario and the federal laws of Canada applicable in Ontario."
+        ]
+      },
+      {
+        "heading": "Changes to these terms",
+        "body": [
+          "We may update these terms from time to time. The date at the top of this page shows when it was last revised."
+        ]
+      }
+    ]
+  },
+
   "footer": {
     "practice": "Practice",
     "firmCol": "Firm",
+    "legalCol": "Legal",
     "office": "Office",
     "address": "393 University Avenue, Suite 1600, Toronto, ON M5G 1E6",
+    "addressStructured": {
+      "streetAddress": "393 University Avenue, Suite 1600",
+      "addressLocality": "Toronto",
+      "addressRegion": "ON",
+      "postalCode": "M5G 1E6",
+      "addressCountry": "CA"
+    },
     "copyright": "© 2026 Shirazi & Associates. Fictional firm — design mockup.",
     "legal": "Information on this site is general and not legal advice."
+  },
+
+  "notFound": {
+    "eyebrow": "404",
+    "heading": "This page doesn't exist. You're not lost, though.",
+    "body": "The link may be wrong, or the page has moved. Here's how to find what you need instead.",
+    "ctaPrimary": "Back to homepage",
+    "ctaSecondary": "Book a free consultation"
   }
 }

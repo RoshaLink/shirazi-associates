@@ -37,10 +37,10 @@ onBeforeUnmount(() => {
 
     <div class="nav-right">
       <nav id="primary-nav" class="nav-links" :class="{ open: navOpen }" :aria-label="t('nav.aria')">
-        <a href="#practice" @click="closeNav">{{ t('nav.immigration') }}</a>
-        <a href="#practice" @click="closeNav">{{ t('nav.family') }}</a>
-        <a href="#counsel" @click="closeNav">{{ t('nav.about') }}</a>
-        <a href="#contact" @click="closeNav">{{ t('nav.contact') }}</a>
+        <NuxtLink :to="localePath('/immigration')" @click="closeNav">{{ t('nav.immigration') }}</NuxtLink>
+        <NuxtLink :to="localePath('/family-law')" @click="closeNav">{{ t('nav.family') }}</NuxtLink>
+        <NuxtLink :to="{ path: localePath('/'), hash: '#counsel' }" @click="closeNav">{{ t('nav.about') }}</NuxtLink>
+        <NuxtLink :to="{ path: localePath('/'), hash: '#contact' }" @click="closeNav">{{ t('nav.contact') }}</NuxtLink>
       </nav>
       <LangToggle />
       <button

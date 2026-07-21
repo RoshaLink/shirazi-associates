@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const localePath = useLocalePath()
 </script>
 
 <template>
@@ -15,16 +16,25 @@ const { t } = useI18n()
       <div>
         <h4>{{ t('footer.practice') }}</h4>
         <ul>
-          <li><a href="#practice">{{ t('nav.immigration') }}</a></li>
-          <li><a href="#practice">{{ t('nav.family') }}</a></li>
+          <li><NuxtLink :to="localePath('/immigration')">{{ t('nav.immigration') }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath('/family-law')">{{ t('nav.family') }}</NuxtLink></li>
         </ul>
       </div>
 
       <div>
         <h4>{{ t('footer.firmCol') }}</h4>
         <ul>
-          <li><a href="#counsel">{{ t('nav.about') }}</a></li>
-          <li><a href="#contact">{{ t('nav.contact') }}</a></li>
+          <li><NuxtLink :to="{ path: localePath('/'), hash: '#counsel' }">{{ t('nav.about') }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath('/insights')">{{ t('nav.insights') }}</NuxtLink></li>
+          <li><NuxtLink :to="{ path: localePath('/'), hash: '#contact' }">{{ t('nav.contact') }}</NuxtLink></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>{{ t('footer.legalCol') }}</h4>
+        <ul>
+          <li><NuxtLink :to="localePath('/privacy')">{{ t('nav.privacy') }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath('/terms')">{{ t('nav.terms') }}</NuxtLink></li>
         </ul>
       </div>
 
