@@ -57,4 +57,11 @@ span {
   line-height: 1.65;
 }
 html[dir="rtl"] span { line-height: 2; }
+
+@media (min-width: 900px) {
+  .grid { grid-template-columns: repeat(4, 1fr); }
+  .grid > .cell:nth-child(3n) { border-inline-end: 1px solid var(--line); }
+  .grid > .cell:nth-child(4n),
+  .grid > .cell:last-child { border-inline-end: 0; }
+}
 </style>

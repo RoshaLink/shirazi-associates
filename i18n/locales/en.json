@@ -12,7 +12,9 @@
     "family": "Family Law",
     "about": "About",
     "contact": "Contact",
-    "langGroup": "Language"
+    "langGroup": "Language",
+    "toggleOpen": "Open menu",
+    "toggleClose": "Close menu"
   },
 
   "hero": {
@@ -39,6 +41,11 @@
       "label": "Practice",
       "value": "Two areas only",
       "note": "Immigration and family law. Nothing else, on purpose."
+    },
+    {
+      "label": "Experience",
+      "value": "30+ years",
+      "note": "Combined across our immigration and family lawyers."
     }
   ],
 
@@ -117,6 +124,56 @@
         "body": "Joined the firm in 2021 after five years at a Toronto family law boutique. Handles separations, support claims, and mehrieh recognition.",
         "tone": "gold",
         "credentials": ["Law Society of Ontario", "English · فارسی · العربية"]
+      }
+    ]
+  },
+
+  "testimonials": {
+    "eyebrow": "In their words",
+    "heading": "Clients who've been through it.",
+    "items": [
+      {
+        "quote": "They explained every letter from IRCC before I even had to ask. I never once felt like a file number.",
+        "attribution": "Spousal sponsorship client, approved 2025"
+      },
+      {
+        "quote": "Told us honestly on the first call that we didn't need a lawyer yet — saved us months of worry and a fee we didn't need to pay.",
+        "attribution": "Family law client"
+      },
+      {
+        "quote": "The only office that could talk about my refugee claim and my divorce in the same meeting, in Farsi.",
+        "attribution": "Immigration & family law client"
+      }
+    ]
+  },
+
+  "faq": {
+    "eyebrow": "Questions",
+    "heading": "Before you reach out.",
+    "items": [
+      {
+        "question": "How much does this cost?",
+        "answer": "The first 30 minutes are always free, in English or Farsi. After that, we give you a flat fee up front wherever the type of case allows it — you'll know the number before you commit to anything."
+      },
+      {
+        "question": "How long does an immigration or family case take?",
+        "answer": "It depends on the file — a straightforward sponsorship can move in months, a contested family matter or an appeal can take longer. On our first call we'll give you an honest, case-specific timeline, not a generic estimate."
+      },
+      {
+        "question": "What if my immigration status isn't fully in order?",
+        "answer": "Come talk to us anyway. Everything you tell us is protected by solicitor–client privilege, and our job is to find the best path forward for your situation — not to judge how you got here."
+      },
+      {
+        "question": "Do I need to speak English well to work with you?",
+        "answer": "No. Every stage of your case — the intake call, the strategy, the paperwork — can be done in Farsi or Dari as well as English."
+      },
+      {
+        "question": "What happens after I send an enquiry?",
+        "answer": "A lawyer — not an intake form — reads it and replies within one business day. If you flag it as urgent, we move it up."
+      },
+      {
+        "question": "Can you handle both my immigration and family matters together?",
+        "answer": "Yes — that overlap is exactly why the firm exists. One team, one file, no hand-off to a second lawyer at the moment it matters most."
       }
     ]
   },

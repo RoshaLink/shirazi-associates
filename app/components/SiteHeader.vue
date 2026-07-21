@@ -1,23 +1,63 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
+
+const navOpen = ref(false)
+const headerEl = ref<HTMLElement | null>(null)
+
+function closeNav() { navOpen.value = false }
+
+function onDocPointerDown(e: MouseEvent) {
+  if (navOpen.value && headerEl.value && !headerEl.value.contains(e.target as Node)) closeNav()
+}
+function onKeydown(e: KeyboardEvent) {
+  if (e.key === 'Escape' && navOpen.value) closeNav()
+}
+
+onMounted(() => {
+  // mousedown (not click) so this fires before the toggle button's own click
+  // handler swaps the hamburger/close icon via v-if — otherwise the DOM patch
+  // races the containment check and the button's own click closes the menu
+  // it just opened.
+  document.addEventListener('mousedown', onDocPointerDown)
+  document.addEventListener('keydown', onKeydown)
+})
+onBeforeUnmount(() => {
+  document.removeEventListener('mousedown', onDocPointerDown)
+  document.removeEventListener('keydown', onKeydown)
+})
 </script>
 
 <template>
-  <header class="nav">
+  <header ref="headerEl" class="nav">
     <NuxtLink class="wordmark" :to="localePath('/')">
       <GirihMark variant="mark" />
       <span>{{ t('firm') }}</span>
     </NuxtLink>
 
     <div class="nav-right">
-      <nav class="nav-links" :aria-label="t('nav.aria')">
-        <a href="#practice">{{ t('nav.immigration') }}</a>
-        <a href="#practice">{{ t('nav.family') }}</a>
-        <a href="#counsel">{{ t('nav.about') }}</a>
-        <a href="#contact">{{ t('nav.contact') }}</a>
+      <nav id="primary-nav" class="nav-links" :class="{ open: navOpen }" :aria-label="t('nav.aria')">
+        <a href="#practice" @click="closeNav">{{ t('nav.immigration') }}</a>
+        <a href="#practice" @click="closeNav">{{ t('nav.family') }}</a>
+        <a href="#counsel" @click="closeNav">{{ t('nav.about') }}</a>
+        <a href="#contact" @click="closeNav">{{ t('nav.contact') }}</a>
       </nav>
       <LangToggle />
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-controls="primary-nav"
+        :aria-expanded="navOpen"
+        :aria-label="navOpen ? t('nav.toggleClose') : t('nav.toggleOpen')"
+        @click="navOpen = !navOpen"
+      >
+        <svg v-if="!navOpen" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.4" />
+        </svg>
+        <svg v-else width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.4" />
+        </svg>
+      </button>
     </div>
   </header>
 </template>
@@ -52,7 +92,33 @@ html[dir="rtl"] .wordmark { letter-spacing: 0; }
 .nav-links a { text-decoration: none; transition: color var(--dur) var(--ease-out); }
 .nav-links a:hover { color: var(--ink); }
 
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+}
+
 @media (max-width: 900px) {
-  .nav-links { display: none; }
+  .nav-toggle { display: inline-flex; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    inset-inline: 0;
+    top: 100%;
+    flex-direction: column;
+    gap: var(--s4);
+    padding: var(--s5) var(--pad);
+    background: var(--bg-lift);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-links.open { display: flex; }
 }
 </style>

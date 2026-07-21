@@ -10,6 +10,8 @@ const { root } = useReveal()
     <ProcessSteps />
     <CounselBio />
     <TeamGrid />
+    <Testimonials />
+    <FaqSection />
     <ContactSection />
   </main>
 </template>
