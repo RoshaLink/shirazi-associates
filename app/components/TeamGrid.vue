@@ -1,15 +1,20 @@
 <script setup lang="ts">
 const { t, tm, rt } = useI18n()
 
-type Member = { name: string; title: string; body: string; tone: 'gold' | 'teal'; credentials: string[] }
+type Member = { name: string; title: string; body: string; tone: 'gold' | 'teal'; credentials: string[]; photo: string }
+
+// Matches team.members' order in both locale files (asset paths aren't
+// translatable content, so they live here rather than in the i18n JSON).
+const photos = ['/photos/aram-kiani.jpg', '/photos/leila-farrokhzad.jpg']
 
 const members = computed<Member[]>(() =>
-  (tm('team.members') as any[]).map(m => ({
+  (tm('team.members') as any[]).map((m, i) => ({
     name: rt(m.name),
     title: rt(m.title),
     body: rt(m.body),
     tone: rt(m.tone) as 'gold' | 'teal',
-    credentials: (m.credentials as any[]).map(rt)
+    credentials: (m.credentials as any[]).map(rt),
+    photo: photos[i]
   }))
 )
 
@@ -25,7 +30,7 @@ const initials = (name: string) => name.split(' ').map(w => w[0]).join('').slice
   <section class="team">
     <article v-for="member in members" :key="member.name" class="member reveal">
       <div class="thumb">
-        <LawyerPortrait :initials="initials(member.name)" :tone="member.tone" size="sm" />
+        <LawyerPortrait :initials="initials(member.name)" :photo="member.photo" :tone="member.tone" size="sm" />
       </div>
       <div class="info">
         <h3>{{ member.name }}</h3>

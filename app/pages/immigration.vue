@@ -25,6 +25,7 @@ const services = computed<Service[]>(() =>
       :eyebrow="t('immigrationPage.hero.eyebrow')"
       :heading="t('immigrationPage.hero.heading')"
       :lede="t('immigrationPage.hero.lede')"
+      image="/photos/scales-of-justice.jpg"
     />
 
     <section class="intro reveal">
