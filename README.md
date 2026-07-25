@@ -4,6 +4,22 @@ A bilingual (English / Farsi) marketing homepage for a fictional Toronto immigra
 
 > **Note:** "Shirazi & Associates" is a fictional firm. This is a design/frontend mockup, not a production client site.
 
+## Screenshots
+
+English build, desktop (1440×900) and mobile (390×844).
+
+| | Desktop | Mobile |
+|---|---|---|
+| **Home** | <img src="docs/screenshots/home-desktop.jpg" width="420"> | <img src="docs/screenshots/home-mobile.jpg" width="160"> |
+| **Immigration** | <img src="docs/screenshots/immigration-desktop.jpg" width="420"> | <img src="docs/screenshots/immigration-mobile.jpg" width="160"> |
+| **Family Law** | <img src="docs/screenshots/family-law-desktop.jpg" width="420"> | <img src="docs/screenshots/family-law-mobile.jpg" width="160"> |
+| **Insights (blog index)** | <img src="docs/screenshots/insights-desktop.jpg" width="420"> | <img src="docs/screenshots/insights-mobile.jpg" width="160"> |
+| **Insights (article)** | <img src="docs/screenshots/insights-article-desktop.jpg" width="420"> | <img src="docs/screenshots/insights-article-mobile.jpg" width="160"> |
+| **Privacy Policy** | <img src="docs/screenshots/privacy-desktop.jpg" width="420"> | <img src="docs/screenshots/privacy-mobile.jpg" width="160"> |
+| **Terms of Use** | <img src="docs/screenshots/terms-desktop.jpg" width="420"> | <img src="docs/screenshots/terms-mobile.jpg" width="160"> |
+
+Farsi (`/fa`) renders the same pages fully mirrored under `dir="rtl"` — see [Localization](#localization) below.
+
 ## Highlights
 
 - **Full bilingual RTL mirror.** Switching to Farsi doesn't just right-align text — the entire layout mirrors (nav, grid, bullets, icons) via CSS logical properties, and the page ships correct `lang`/`dir` attributes, canonical URLs, and hreflang alternates for both locales.
