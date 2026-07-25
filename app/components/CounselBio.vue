@@ -7,7 +7,7 @@ const initials = computed(() => t('counsel.name').split(' ').map(w => w[0]).join
 <template>
   <section id="counsel" class="counsel">
     <div class="portrait">
-      <LawyerPortrait :initials="initials" tone="gold" size="lg" />
+      <LawyerPortrait :initials="initials" photo="/photos/nasrin-shirazi.jpg" tone="gold" size="lg" />
     </div>
 
     <div class="bio">

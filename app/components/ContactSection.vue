@@ -119,6 +119,9 @@ function submit() {
   flex-direction: column;
   justify-content: center;
   gap: var(--s5);
+  background:
+    linear-gradient(180deg, rgba(14, 14, 13, .75), rgba(14, 14, 13, .93) 70%, var(--bg) 100%),
+    url('/photos/toronto-skyline.jpg') center / cover no-repeat;
 }
 .pitch h2 { font-size: clamp(28px, 3.6vw, 48px); max-width: 16ch; }
 html[dir="rtl"] .pitch h2 { font-size: clamp(23px, 3vw, 38px); }
