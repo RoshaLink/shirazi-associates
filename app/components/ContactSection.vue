@@ -168,6 +168,7 @@ input, select, textarea {
   transition: border-color var(--dur) var(--ease-out);
 }
 textarea { min-height: 120px; resize: vertical; line-height: 1.6; }
+input:hover, select:hover, textarea:hover { border-color: var(--ink-2); }
 input:focus, select:focus, textarea:focus { border-color: var(--accent-line); }
 input::placeholder, textarea::placeholder { color: var(--ink-3); }
 

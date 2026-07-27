@@ -94,13 +94,32 @@ onBeforeUnmount(() => {
   font-size: 16px;
   letter-spacing: -.01em;
   text-decoration: none;
+  transition: opacity var(--dur) var(--ease-out);
 }
+.wordmark:hover { opacity: .78; }
 html[dir="rtl"] .wordmark { letter-spacing: 0; }
 
 .nav-right { display: flex; align-items: center; gap: var(--s6); }
 .nav-links { display: flex; gap: var(--s6); font-size: 14px; color: var(--ink-2); }
-.nav-links a { text-decoration: none; transition: color var(--dur) var(--ease-out); }
+.nav-links a {
+  position: relative;
+  padding-bottom: 4px;
+  text-decoration: none;
+  transition: color var(--dur) var(--ease-out);
+}
 .nav-links a:hover { color: var(--ink); }
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--dur) var(--ease-out);
+}
+.nav-links a:hover::after { transform: scaleX(1); }
 
 .lang-slot {
   position: absolute;

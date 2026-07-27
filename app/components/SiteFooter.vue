@@ -84,8 +84,10 @@ h4 {
 
 ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: var(--s3); }
 ul a {
+  position: relative;
   display: inline-flex;
   align-items: center;
+  width: fit-content;
   min-height: 32px;
   font-size: 14px;
   color: var(--ink-2);
@@ -93,6 +95,18 @@ ul a {
   transition: color var(--dur) var(--ease-out);
 }
 ul a:hover { color: var(--ink); }
+ul a::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 8px;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--dur) var(--ease-out);
+}
+ul a:hover::after { transform: scaleX(1); }
 .plain { font-size: 14px; color: var(--ink-2); line-height: 1.7; }
 
 .foot-base {

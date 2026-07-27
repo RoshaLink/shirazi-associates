@@ -26,7 +26,13 @@ const items = computed<Testimonial[]>(() =>
 </template>
 
 <style scoped>
-.testimonial { margin: 0; gap: var(--s4); padding-block: clamp(32px, 4.5vw, 56px); }
+.testimonial {
+  margin: 0;
+  gap: var(--s4);
+  padding-block: clamp(32px, 4.5vw, 56px);
+  transition: background var(--dur) var(--ease-out);
+}
+.testimonial:hover { background: var(--bg-lift); }
 
 .quote {
   font-size: 16px;
