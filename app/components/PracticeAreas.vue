@@ -39,7 +39,12 @@ const familyItems = computed(() => (tm('practice.family.items') as any[]).map(rt
 </template>
 
 <style scoped>
-.practice { gap: var(--s5); padding-block: clamp(36px, 5vw, 64px); }
+.practice {
+  gap: var(--s5);
+  padding-block: clamp(36px, 5vw, 64px);
+  transition: background var(--dur) var(--ease-out);
+}
+.practice:hover { background: var(--bg-lift); }
 h3 { font-size: clamp(22px, 2.4vw, 30px); }
 
 .overlap { font-size: 15px; }

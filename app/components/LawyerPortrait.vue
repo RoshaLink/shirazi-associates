@@ -56,6 +56,13 @@ const clipId = `portrait-clip-${useId()}`
 .ring-inner { stroke: var(--accent-line); opacity: .5; }
 .ring-accent { stroke: var(--tone); opacity: .55; }
 
+.portrait-mark image {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 420ms var(--ease-out);
+}
+.portrait-mark:hover image { transform: scale(1.045); }
+
 .bust {
   fill: var(--bg-lift);
   stroke: var(--line-2);

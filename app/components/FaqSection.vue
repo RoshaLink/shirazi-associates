@@ -31,8 +31,10 @@ const items = computed<FaqItem[]>(() =>
 .faq-item {
   padding: var(--s5) var(--pad);
   border-bottom: 1px solid var(--line);
+  transition: background var(--dur) var(--ease-out);
 }
 .faq-item:last-child { border-bottom: 0; }
+.faq-item:hover { background: var(--bg-lift); }
 
 summary {
   cursor: pointer;

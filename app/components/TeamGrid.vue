@@ -61,7 +61,9 @@ const initials = (name: string) => name.split(' ').map(w => w[0]).join('').slice
   padding: clamp(24px, 3.5vw, 40px) var(--pad);
   border-bottom: 1px solid var(--line);
   border-inline-end: 1px solid var(--line);
+  transition: background var(--dur) var(--ease-out);
 }
+.member:hover { background: var(--bg-lift); }
 @media (min-width: 700px) {
   .member:nth-child(2n) { border-inline-end: 0; }
 }
