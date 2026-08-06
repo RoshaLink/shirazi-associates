@@ -8,9 +8,9 @@ const { t, tm, rt, locale } = useI18n()
  */
 const localeHead = useLocaleHead()
 
-// Same placeholder domain nuxt.config.ts's i18n.baseUrl already uses for
-// hreflang — swap both together for the real domain.
-const siteUrl = 'https://shirazilaw.ca'
+// Same domain nuxt.config.ts's i18n.baseUrl already uses for hreflang —
+// swap both together if this ever moves off GitHub Pages.
+const siteUrl = 'https://roshalink.github.io/shirazi-associates'
 const ogImage = `${siteUrl}/og-image.png`
 
 /**

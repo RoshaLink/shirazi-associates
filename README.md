@@ -48,6 +48,12 @@ npm run generate  # static build → .output/public
 npm run preview   # preview the static build locally
 ```
 
+## Deployment
+
+Deployed to GitHub Pages via `.github/workflows/deploy-pages.yml`, which builds on every push to `master` and publishes `.output/public`. Live at **https://roshalink.github.io/shirazi-associates/**.
+
+It's a project site, not a custom domain, so the build runs with `NUXT_APP_BASE_URL=/shirazi-associates/` and `nitro.preset: 'github-pages'` (writes `.nojekyll`, prerenders `/404.html`) — both set in `nuxt.config.ts`. Local dev is unaffected; the base path only applies to the deployed build.
+
 ## Project structure
 
 ```
