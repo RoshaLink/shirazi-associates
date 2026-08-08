@@ -5,7 +5,7 @@ type Member = { name: string; title: string; body: string; tone: 'gold' | 'teal'
 
 // Matches team.members' order in both locale files (asset paths aren't
 // translatable content, so they live here rather than in the i18n JSON).
-const photos = ['/photos/aram-kiani.jpg', '/photos/leila-farrokhzad.jpg']
+const photos = ['/photos/aram-kiani.jpg', '/photos/leila-farrokhzad.jpg'].map(publicAsset)
 
 const members = computed<Member[]>(() =>
   (tm('team.members') as any[]).map((m, i) => ({

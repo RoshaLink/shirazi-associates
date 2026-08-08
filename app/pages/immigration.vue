@@ -8,6 +8,8 @@ useHead(() => ({
   meta: [{ name: 'description', content: t('immigrationPage.hero.lede') }]
 }))
 
+const heroImage = publicAsset('/photos/scales-of-justice.jpg')
+
 const intro = computed(() => (tm('immigrationPage.intro') as any[]).map(rt))
 
 type Service = { title: string; body: string[] }
@@ -25,7 +27,7 @@ const services = computed<Service[]>(() =>
       :eyebrow="t('immigrationPage.hero.eyebrow')"
       :heading="t('immigrationPage.hero.heading')"
       :lede="t('immigrationPage.hero.lede')"
-      image="/photos/scales-of-justice.jpg"
+      :image="heroImage"
     />
 
     <section class="intro reveal">

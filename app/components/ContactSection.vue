@@ -1,6 +1,11 @@
 <script setup lang="ts">
 const { t, tm, rt } = useI18n()
 
+// Set as an inline custom property (not a literal url() in the scoped
+// <style> below) since public/ paths need the runtime baseURL prefixed in —
+// see app/utils/publicAsset.ts.
+const pitchStyle = { '--pitch-image': `url(${publicAsset('/photos/toronto-skyline.jpg')})` }
+
 const matterOptions = computed(() => (tm('contact.form.matterOptions') as any[]).map(rt))
 
 const form = reactive({ name: '', contact: '', matter: '', message: '' })
@@ -30,7 +35,7 @@ function submit() {
 
 <template>
   <section id="contact" class="contact">
-    <div class="pitch">
+    <div class="pitch" :style="pitchStyle">
       <p class="eyebrow">{{ t('contact.eyebrow') }}</p>
       <h2>{{ t('contact.heading') }}</h2>
       <p class="lede">{{ t('contact.lede') }}</p>
@@ -121,7 +126,7 @@ function submit() {
   gap: var(--s5);
   background:
     linear-gradient(180deg, rgba(14, 14, 13, .75), rgba(14, 14, 13, .93) 70%, var(--bg) 100%),
-    url('/photos/toronto-skyline.jpg') center / cover no-repeat;
+    var(--pitch-image) center / cover no-repeat;
 }
 .pitch h2 { font-size: clamp(28px, 3.6vw, 48px); max-width: 16ch; }
 html[dir="rtl"] .pitch h2 { font-size: clamp(23px, 3vw, 38px); }

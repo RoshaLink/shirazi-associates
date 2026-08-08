@@ -2,12 +2,13 @@
 const { t, tm, rt } = useI18n()
 const credentials = computed(() => (tm('counsel.credentials') as any[]).map(rt))
 const initials = computed(() => t('counsel.name').split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase())
+const photo = publicAsset('/photos/nasrin-shirazi.jpg')
 </script>
 
 <template>
   <section id="counsel" class="counsel">
     <div class="portrait">
-      <LawyerPortrait :initials="initials" photo="/photos/nasrin-shirazi.jpg" tone="gold" size="lg" />
+      <LawyerPortrait :initials="initials" :photo="photo" tone="gold" size="lg" />
     </div>
 
     <div class="bio">
