@@ -41,6 +41,20 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
+/* Scrollbar matches the site's dark/gold palette instead of the browser
+   default. scrollbar-color covers Firefox; the ::-webkit- rules cover
+   Chrome/Safari/Edge. Uses the same semantic tokens as everything else
+   (--bg-lift/--accent), so a palette remap picks this up for free. */
+html { scrollbar-color: var(--accent) var(--bg-lift); scrollbar-width: thin; }
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--bg-lift); }
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 6px;
+  border: 3px solid var(--bg-lift);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--accent-hover); }
+
 body {
   margin: 0;
   background: var(--bg);
